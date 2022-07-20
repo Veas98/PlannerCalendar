@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar </title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="getDate(0, 0)">
+
+<div id="grid-container-main">
+
+    <div class="calendar1">
+        <div id="month_year"></div>
+        <button type="button" onclick="prevMonth()" id="prevMonth"> < </button>
+        <button type="button" onclick="anotherMonth()" id="anotherMonth"> > </button>
+    </div>
+    <div class="calendar">
+    <div id="days"></div>
+    <div id="print"></div>
+    </div>
+
+    <div class="buttons">
+        <button type="button" onclick="make_event()" class="buttons_">Make new transport order </button>
+        <br>
+
+    </div>
+
+    <div class="chosen_data">
+        <div id="chosenData">Choose data to show</div>
+    </div>
+
+    <div class="hours1">
+        <p class="p_style">SHIPPED TODAY</p>
+        <div id="h1">There is no orders to show </div>
+    </div>
+    <div class="hours2">
+        <p class="p_style">RECEIVING TODAY</p>
+        <div id="h2">There is no orders to show</div>
+    </div>
+
+
+    <div class="notifications">
+        <p> Notifications</p>
+    </div>
+</div>
+<div id="grid-order">
+    <div id="newEvent1" class="box1"> NEW TRANSPORT ORDER</div>
+    <div class="box2">
+        <p class="orders">Leader of order/Email/PhoneNumber:</p>
+        <label>
+            <input type="text" id="leader" size="15">
+            <input type="text" id="leader_email" size="13">
+            <input type="text" id="leader_nr" size="8">
+        </label>
+        <p class="orders">Where order start:</p>
+        <label>
+            <input type="text" id="place_load">
+        </label>
+        <p class="orders">Where order end:</p>
+        <label> <input type="text" id="place_reload"></label>
+        <p class="orders">Data of load:</p>
+        <label><input type="date" id="data_load_day" size="1"></label>
+        <p class="orders">Data of reload:</p>
+        <label><input type="date" id="data_reload_day" size="1"></label>
+        <p class="orders">Hour of load:</p>
+        <label><input type="time" id="hour_load"></label>
+        <p class="orders">Hour of reload:</p>
+        <label><input type="time" id="hour_reload"></label>
+    </div>
+        <div class="box3">
+        <p class="orders">Person responsible for load + phone:</p>
+        <label ><input type="text" id="person_load"><input type="text" id="person_load_nr" size="8"></label>
+        <p class="orders">Person responsible for reload + phone:</p>
+        <label><input type="text" id="person_reload"><input type="text" id="person_reload_nr" size="8"></label>
+        <p class="orders">Type of car:</p>
+        <label><input type="text" id="car_type"></label>
+        <p class="orders">Weight of the load:</p>
+        <label><input type="text" id="load_weight"></label>
+        <p class="orders">Carrier:</p>
+        <label><input type="text" id="carrier"></label>
+        <p class="orders">Price:</p>
+        <label><input type="text" id="price"></label>
+        <p class="orders">Order ID:</p>
+        <label><input type="text" id="orderID" size ="1" maxlength="4"></label>
+    </div>
+    <div class="box4">
+    <button type="button" onclick="getInfo()" id="saveButton" class="buttons_">Save</button>
+        <button type="button" onclick="editOrder()" id="editButton" class="buttons_">Edit</button>
+    <button type="button" onclick="Back()" class="buttons_">Back</button>
+    </div>
+</div>
+</body>
+</html>
